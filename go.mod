@@ -1,4 +1,4 @@
-module gotest
+module Fetch
 
 go 1.24
 
