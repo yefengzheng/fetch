@@ -84,9 +84,10 @@ func extractDomain(rawURL string) (string, error) {
 	if err != nil {
 		return "", err
 	}
+	// strip port
 	host := u.Host
 	if idx := strings.Index(host, ":"); idx != -1 {
-		host = host[:idx] // strip port
+		host = host[:idx]
 	}
 	return host, nil
 }
